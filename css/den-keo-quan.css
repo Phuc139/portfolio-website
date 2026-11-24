@@ -1,0 +1,82 @@
+ .lantern-page {
+    text-align: center;
+}
+
+.instruction {
+    line-height: 1.6;
+}
+
+.lantern-area {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 900px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.lantern {
+    position: relative;
+    width: 190px;
+    height: 230px;
+    transform-style: preserve-3d;
+    animation: xoayDen 12s linear infinite;
+}
+
+.lantern:hover {
+    animation-play-state: paused;
+}
+
+.face {
+    position: absolute;
+    width: 190px;
+    height: 230px;
+    left: 0;
+    top: 0;
+    border: 3px solid #d59b35;
+    background: #fff;
+    overflow: hidden;
+    backface-visibility: visible;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sáu mặt được đặt quanh trục của đèn */
+.face1 { transform: rotateY(0deg) translateZ(165px); }
+.face2 { transform: rotateY(60deg) translateZ(165px); }
+.face3 { transform: rotateY(120deg) translateZ(165px); }
+.face4 { transform: rotateY(180deg) translateZ(165px); }
+.face5 { transform: rotateY(240deg) translateZ(165px); }
+.face6 { transform: rotateY(300deg) translateZ(165px); }
+
+#status {
+    font-weight: bold;
+    color: #254b70;
+}
+
+.note {
+    color: #666;
+    font-size: 14px;
+}
+
+@keyframes xoayDen {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@media (max-width: 600px) {
+    .lantern-area {
+        height: 320px;
+    }
+
+    .lantern {
+        transform: scale(0.78);
+    }
+}
