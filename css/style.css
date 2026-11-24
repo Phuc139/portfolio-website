@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+.header {
+    background: #254b70;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+.header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.menu {
+    background: #18364f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 17px;
+}
+
+.menu a:hover {
+    background: #37698f;
+}
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 30px auto;
+}
+
+.intro, .exercise-list, .exercise-content {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    margin-bottom: 22px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    display: block;
+    background: #edf3f8;
+    color: #222;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 7px;
+    border: 1px solid #d5e0e9;
+}
+
+.card:hover {
+    background: #dceaf5;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #254b70;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card.featured {
+    background: #fff2d9;
+    border-color: #e6c47e;
+}
+
+.footer {
+    background: #18364f;
+    color: white;
+    text-align: center;
+    padding: 17px;
+    margin-top: 35px;
+}
+
+.exercise-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .menu a {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}
